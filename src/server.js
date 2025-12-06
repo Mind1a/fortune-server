@@ -40,5 +40,5 @@ app.use("/api/fortune", fortuneRoutes);
 
 const PORT = 4000;
 app.listen(PORT, () =>
-  console.log(`Server is urrning on Port: http://localhost:${PORT}`)
+  console.log(`Server is running on Port: http://localhost:${PORT}`)
 );
