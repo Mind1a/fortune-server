@@ -1,5 +1,8 @@
 import express from "express";
+
 import fortuneRoutes from "./routes/fortuneRoutes.js";
+import feedbackRoutes from "./routes/feedbackRoutes.js";
+
 import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
@@ -37,6 +40,9 @@ app.get("/home", (request, response) => {
 // localhost:4000
 // facebook.com/api/fortune
 app.use("/api/fortune", fortuneRoutes);
+
+//    localhost:4000/api/feedback/all
+app.use("/api/feedback", feedbackRoutes);
 
 const PORT = 4000;
 app.listen(PORT, () =>
