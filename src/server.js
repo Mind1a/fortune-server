@@ -2,6 +2,7 @@ import express from "express";
 
 import fortuneRoutes from "./routes/fortuneRoutes.js";
 import feedbackRoutes from "./routes/feedbackRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 
 import dotenv from "dotenv";
 import cors from "cors";
@@ -41,8 +42,11 @@ app.get("/home", (request, response) => {
 // facebook.com/api/fortune
 app.use("/api/fortune", fortuneRoutes);
 
-//    localhost:4000/api/feedback/all
+//    localhost:4000/api/feedback/
 app.use("/api/feedback", feedbackRoutes);
+
+//  /api/contact
+app.use("/api/contact", contactRoutes);
 
 const PORT = 4000;
 app.listen(PORT, () =>
